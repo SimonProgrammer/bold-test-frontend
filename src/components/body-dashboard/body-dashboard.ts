@@ -1,13 +1,14 @@
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-import HeaderDashboard from '@/components/header-dashboard/HeaderDashboard.vue'
-import BodyDashboard from '@/components/body-dashboard/BodyDashboard.vue'
+
+import SalesDay from '@/components/sales-day/SalesDay.vue'
+import FilterData from '@/components/filter-data/FilterData.vue'
 
 export default defineComponent({
-  name: 'App',
+  name: 'BodyDashboard',
   components:{
-    HeaderDashboard,
-    BodyDashboard
+    SalesDay,
+    FilterData
   },
   setup(){
     const { locale, t } = useI18n({

@@ -1,0 +1,29 @@
+.bold-body{
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    padding-top: 2rem;
+    &__filter{
+        display: flex;
+    }
+}
+
+@include media-query(xxs){
+    .bold-body{
+        & *{
+            grid-column: 2 / -2;
+        }
+        &__filter{
+            flex-direction: column;
+            row-gap: 1rem;
+        }
+    }
+}
+
+@include media-query(md){
+    .bold-body{
+        &__filter{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}

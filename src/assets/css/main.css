@@ -18,7 +18,7 @@
     src: url(@/assets/fonts/montserrat/Montserrat-Bold.otf) format('opentype');
 }
 
-body, html{
+body, html, #app{
     margin: 0;
     height: 100%;
 }

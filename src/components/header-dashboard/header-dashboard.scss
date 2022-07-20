@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: repeat(24, 1fr);
     align-items: center;
-    background-image: linear-gradient(to right, $blue , $red-wine);
+    background-image: linear-gradient(to right, $blue , $red-wine-light);
     &__icon{
         grid-column: 2 / 6;
     }
