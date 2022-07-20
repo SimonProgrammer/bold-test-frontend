@@ -18,3 +18,8 @@
     src: url(@/assets/fonts/montserrat/Montserrat-Bold.otf) format('opentype');
 }
 
+body, html{
+    margin: 0;
+    height: 100%;
+}
+
