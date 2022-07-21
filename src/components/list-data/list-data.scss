@@ -1,0 +1,21 @@
+@include media-query(xxs){
+    .bold-list{
+        *:nth-child(1){
+            display: none;
+        }
+        *:nth-child(2){
+            display: flex;
+        }
+    }
+}
+
+@include media-query(md){
+    .bold-list{
+        *:nth-child(1){
+            display: block;
+        }
+        *:nth-child(2){
+            display: none;
+        }
+    }
+}
