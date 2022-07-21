@@ -35,7 +35,7 @@
             <button 
                 className="bold-widget__footer__cta"
                 :disabled="filters.length == 0"
-                @click="applyFilter">
+                @click.stop="applyFilter">
                 {{ t('common_text_apply') }}
             </button>
         </div>

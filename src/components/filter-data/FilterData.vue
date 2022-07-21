@@ -11,7 +11,7 @@
             <li className="bold-filter__list__item">Esta semana</li>
             <li className="bold-filter__list__item">Septiembre</li>
         </ul>
-        <button className="bold-filter__cta" @click="changeStatusFilter(true)">
+        <button className="bold-filter__cta" @click.stop="changeStatusFilter(true)">
             <span>Filtrar</span>
             <img src="/icons/filter_icon.png" alt="filter icon" />
             <div className="bold-filter__cta__filter">

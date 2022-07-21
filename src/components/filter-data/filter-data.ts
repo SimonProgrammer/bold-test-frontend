@@ -16,7 +16,7 @@ export default defineComponent({
     return { locale, t }
   },
   data: () => ({
-    showFilter: true,
+    showFilter: false,
     widgetFilter: []
   }),
   methods:{
@@ -24,8 +24,8 @@ export default defineComponent({
       this.showFilter = status;
     },
     assignFilter({ filters }:any){
+      this.widgetFilter = filters;
       this.changeStatusFilter(false);
-      console.log(filters);
     }
   }
 })

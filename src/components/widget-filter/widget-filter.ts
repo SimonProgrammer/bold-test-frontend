@@ -19,7 +19,7 @@ export default defineComponent({
     },
     applyFilter(){
       const { filters }: { filters: any } = this;
-      this.$emit('filter', { filters })
+      this.$emit('filter', { filters });
     }
   }
 })
