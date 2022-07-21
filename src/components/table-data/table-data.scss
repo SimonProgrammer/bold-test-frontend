@@ -1,0 +1,138 @@
+.bold-table{
+    width: 100%;
+    &__title{
+        background-image: linear-gradient(to right, $blue , $red-wine);
+        font-family: $font-regular;
+        color: $white;
+        border-radius: 0.75em 0.75em 0 0;
+        th{
+            text-align: left;
+            padding: 0.75rem;
+            border-radius: 0.75em 0.75em 0 0;
+            font-size: 1.2rem;
+        }
+    }
+    &__head{
+        background-color: $white;
+        tr{
+            th{
+                text-align: left;
+                font-family: $font-regular;
+                font-weight: 400;
+                padding: 0.75rem 0 0.75rem 1rem;
+                border-bottom: 1px solid $bg-color;
+            }
+        }
+    }
+    &__body{
+        background-color: $white;
+        display:block;
+        overflow-y:auto;
+        tr{
+            td{
+                border-bottom: 1px solid $bg-color;
+                padding: 0.8rem 0 0.8rem 1rem;
+                font-family: $font-regular;
+                .blue{
+                    color: $blue;
+                }
+                .gray{
+                    color: $light-gray;
+                }
+                .red{
+                    color: $red;
+                }
+                .row{
+                    display: flex;
+                    flex-direction: row;
+                    column-gap: 0.5rem;
+                    align-items: center;
+                }
+                .column{
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 0.5rem;
+                    justify-content: start;
+                }
+                img{
+                    &.card{
+                        width: 1.5rem;
+                    }
+                    &.icon{
+                        width: 1rem;
+                    }
+                }
+            }
+        }
+        &__success{
+            td:nth-child(1){
+                border-left: 3px solid $blue;
+            }
+        }
+        &__error{
+            td:nth-child(1){
+                border-left: 3px solid $brown-color-1;
+            }
+        }
+    }
+    th,
+    td{
+        padding-left: 0.75rem;
+    }
+    thead, tbody tr {
+        display:table;
+        width:100%;
+        table-layout:fixed;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: $blue-light; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $light-gray; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $dark-gray; 
+}
+
+@include media-query(md){
+    .bold-table{
+        &__body{
+            max-height:230px;
+        }
+    }
+}
+
+@include media-query(lg){
+    .bold-table{
+        &__body{
+            max-height:250px;
+        }
+    }
+}
+
+@include media-query(lg){
+    .bold-table{
+        &__body{
+            max-height:250px;
+        }
+    }
+}
+
+@include media-query(xxxl){
+    .bold-table{
+        &__body{
+            max-height:300px;
+        }
+    }
+}

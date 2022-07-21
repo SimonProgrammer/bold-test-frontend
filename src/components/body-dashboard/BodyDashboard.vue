@@ -5,6 +5,7 @@
             <sales-day />
             <filter-data />
         </div>
+        <list-data />
     </section>
 </template>
 <style lang="scss" scoped src="./body-dashboard.scss"></style>
