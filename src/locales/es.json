@@ -9,5 +9,10 @@
   "list_data_text_payment_method": "Método de pago",
   "list_data_text_transaction_bold_id": "ID Transacción Bold",
   "list_data_text_amount": "Monto",
-  "list_data_text_bold_deduction": "Deducción bold"
+  "list_data_text_bold_deduction": "Deducción bold",
+  "common_text_filter": "Filtrar",
+  "common_text_payment_with_dataphone": "Cobro con datáfono",
+  "common_text_collections_payment_link": "Cobros con link de pago",
+  "common_text_see_all": "Ver todos",
+  "common_text_apply": "Aplicar"
 }

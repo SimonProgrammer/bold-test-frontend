@@ -9,6 +9,7 @@
         background-color: $white;
     }
     &__cta{
+        position: relative;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -20,6 +21,9 @@
         color: $blue;
         text-transform: uppercase;
         cursor: pointer;
+        &__filter{
+            position: absolute;
+        }
     }
     &__list{
         display: none;
@@ -98,6 +102,10 @@
             width: 14rem;
             img{
                 width: 1.5rem;
+            }
+            &__filter{
+                top:0;
+                right: 0;
             }
         }
         &__list{

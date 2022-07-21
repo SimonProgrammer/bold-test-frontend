@@ -1,0 +1,69 @@
+.bold-widget{
+    background-color: $white;
+    border-radius: 0.75em;
+    box-shadow: $box-shadow-2;
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    height: 225px;
+    justify-content: space-between;
+    padding: 10px;
+    &__header{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        &__title{
+            font-family: $font-medium;
+            color: $blue;
+        }
+        &__close{
+            color: $blue;
+            font-size: 23px;
+            outline: 0;
+            border: 0;
+            background-color: transparent;
+            position: absolute;
+            inset: 0 0 0 auto;
+            margin: auto;
+            width: fit-content;
+            height: fit-content;
+        }
+    }
+    &__body{
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        &__item{
+            font-family: $font-semibold;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-direction: row;
+            column-gap: 10px;
+            text-align: left;
+            font-size: 18px;
+            text-transform: none;
+            input{
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+    &__footer{
+        &__cta{
+            font-family: $font-semibold;
+            font-size: 18px;
+            border: 0;
+            background-color: $red;
+            border-radius: 1.25em;
+            color: $white;
+            width: 160px;
+            padding: 12px 0;
+            margin-bottom: 10px;
+            &[disabled]{
+                opacity: 0.7;
+            }
+        }
+    }
+}
