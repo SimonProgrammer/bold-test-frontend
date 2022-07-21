@@ -3,22 +3,22 @@
     <section className="bold-container">
         <div className="bold-container__item">
             <div className="bold-container__item__content">
-                <span>Transacción</span>
+                <span>{{ t('list_data_text_transaction') }}</span>
                 <article className="row">
                     <img 
                         src="/icons/dataphone.png" 
                         className="icon" 
                         alt="dataphone" 
                     />
-                    <span className="blue">Cobro exitoso</span>
+                    <span className="blue">{{ t('list_data_text_successful_collection') }}</span>
                 </article>
             </div>
             <div className="bold-container__item__content">
-                <span>Fecha y hora</span>
+                <span>{{ t('list_data_text_datetime') }}</span>
                 <span className="gray">04/04/2022 23:00</span>
             </div>
             <div className="bold-container__item__content">
-                <span>Método de pago</span>
+                <span>{{ t('list_data_text_payment_method') }}</span>
                 <article className="row">
                     <img 
                         src="/icons/logo_mastercard.png" 
@@ -29,14 +29,14 @@
                 </article>
             </div>
             <div className="bold-container__item__content">
-                <span>ID Transacción Bold</span>
+                <span>{{ t('list_data_text_transaction_bold_id') }}</span>
                 <span className="gray">GZ323344MN</span>
             </div>
             <div className="bold-container__item__content">
-                <span>Monto</span>
+                <span>{{ t('list_data_text_amount') }}</span>
                 <article className="column">
                     <span className="blue">$25.000</span>
-                    <span className="gray">Deducción bold</span>
+                    <span className="gray">{{ t('list_data_text_bold_deduction') }}</span>
                     <span className="red">-$15.000</span>
                 </article>
             </div>
