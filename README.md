@@ -14,3 +14,12 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
 
 You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+
+## Local deployment instructions
+
+1. Install nvm in your SO. Instructions [here](https://github.com/nvm-sh/nvm) 
+2. Create ``.env`` file in this directory with this content: ``VITE_API_URL=https://expressjs-mongoose-production-279b.up.railway.app``
+3. Execute this command in this directory ``nvm use``
+4. Execute this command for install dependencies ``npm i``
+5. For development environment execute ``npm run dev``
+6. For production environment execute ``npm run build``
