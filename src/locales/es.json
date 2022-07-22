@@ -14,5 +14,8 @@
   "common_text_payment_with_dataphone": "Cobro con datáfono",
   "common_text_collections_payment_link": "Cobros con link de pago",
   "common_text_see_all": "Ver todos",
-  "common_text_apply": "Aplicar"
+  "common_text_apply": "Aplicar",
+  "common_text_today": "Hoy",
+  "common_text_week": "Esta semana",
+  "common_text_your_sales": "Tus ventas de {periodSales}"
 }

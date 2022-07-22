@@ -10,7 +10,7 @@
                 <input 
                     type="checkbox" 
                     id="cbox1" 
-                    value="dataphone_payment"
+                    value="dataphone"
                     v-model="filters" />
                 <label for="cbox1">{{t('common_text_payment_with_dataphone') }}</label>
             </article>
@@ -18,7 +18,7 @@
                 <input 
                     type="checkbox" 
                     id="cbox2" 
-                    value="link_payment"
+                    value="link"
                     v-model="filters" />
                 <label for="cbox2">{{t('common_text_collections_payment_link') }}</label>
             </article>

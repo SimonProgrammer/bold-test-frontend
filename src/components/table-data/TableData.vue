@@ -4,7 +4,7 @@
         <table className="bold-table" cellspacing="0" cellpadding="0">
             <thead className="bold-table__title">
                 <tr>
-                    <th colspan="5">Tus ventas de septiembre</th>
+                    <th colspan="5">{{ t('common_text_your_sales',{ periodSales }) }}</th>
                 </tr>
             </thead>
             <thead className="bold-table__head">
@@ -17,50 +17,33 @@
                 </tr>
             </thead>
             <tbody className="bold-table__body">
-                <tr className="bold-table__body__success">
+                <tr v-for="(item, index) in items" className="bold-table__body__success" :key="index">
                     <td>
                         <article className="row">
-                            <img 
-                                src="/icons/url_icon.png" 
-                                alt="dataphone" 
-                                className="icon"
-                            />
-                            <span className="blue">{{ t('list_data_text_successful_collection') }}</span>
+                            <template v-if="item.paymentType === 'link'">
+                                <img 
+                                    src="/icons/url_icon.png" 
+                                    alt="url" 
+                                    className="icon"
+                                />
+                            </template>
+                            <template v-if="item.paymentType === 'dataphone'">
+                                <img 
+                                    src="/icons/dataphone.png" 
+                                    alt="dataphone" 
+                                    className="icon"
+                                />
+                            </template>
+                            <template v-if="item.paymentStatus === 'successful_charge'">
+                                <span className="blue">{{ t('list_data_text_successful_collection') }}</span>
+                            </template>
+                            <template v-if="item.paymentStatus === 'payment_not_made'">
+                                <span className="blue">{{ t('list_data_text_collection_not_made') }}</span>
+                            </template>
                         </article>
                     </td>
                     <td>
-                        <span className="gray">04/04/2022 23:00</span>
-                    </td>
-                    <td>
-                        <article className="row">
-                            <img 
-                                src="/icons/logo_mastercard.png" 
-                                alt="mastercard"
-                                className="card" 
-                            />
-                            <span className="gray">**** **** *** 1277</span>
-                        </article>
-                    </td>
-                    <td>
-                        <span className="gray">GZ323344MN</span>
-                    </td>
-                    <td>
-                        <span className="blue">$25.000</span>
-                    </td>
-                </tr>
-                <tr className="bold-table__body__error">
-                    <td>
-                        <article className="row">
-                            <img 
-                                src="/icons/dataphone.png" 
-                                alt="dataphone" 
-                                className="icon"
-                            />
-                            <span className="blue">{{ t('list_data_text_collection_not_made') }}</span>
-                        </article>
-                    </td>
-                    <td>
-                        <span className="gray">04/04/2022 23:00</span>
+                        <span className="gray">{{ formatDateItem(item.datePayment) }}</span>
                     </td>
                     <td>
                         <article className="row">
@@ -69,18 +52,23 @@
                                 alt="mastercard"
                                 className="card" 
                             />
-                            <span className="gray">**** **** *** 1277</span>
+                            <span className="gray">**** **** *** {{ item.lastDigit }}</span>
                         </article>
                     </td>
                     <td>
-                        <span className="gray">GZ323344MN</span>
+                        <span className="gray">{{ item.transactionId }}</span>
                     </td>
                     <td>
-                        <article className="column">
-                            <span className="blue">$25.000</span>
-                            <span className="gray">{{ t('list_data_text_bold_deduction') }}</span>
-                            <span className="red">-$15.000</span>
-                        </article>
+                        <template v-if="item.deductionStatus">
+                            <article className="column">
+                                <span className="blue">{{ currency(item.amount) }}</span>
+                                <span className="gray">{{ t('list_data_text_bold_deduction') }}</span>
+                                <span className="red">-{{ currency(item.deductionAmount) }}</span>
+                            </article>
+                        </template>
+                        <template v-else-if="!item.deductionStatus">
+                            <span className="blue">{{ currency(item.amount) }}</span>
+                        </template>
                     </td>
                 </tr>
             </tbody>
