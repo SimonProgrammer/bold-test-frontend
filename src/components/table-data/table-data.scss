@@ -121,18 +121,18 @@
     }
 }
 
-@include media-query(lg){
+@include media-query(xl){
     .bold-table{
         &__body{
-            max-height:250px;
+            max-height:350px;
         }
     }
 }
 
-@include media-query(xxxl){
+@include media-query(xxl){
     .bold-table{
         &__body{
-            max-height:300px;
+            max-height:460px;
         }
     }
 }

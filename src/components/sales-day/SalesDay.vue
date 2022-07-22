@@ -6,8 +6,8 @@
             <img src="/icons/information_icon.png" alt="information icon" />
         </header>
         <section className="bold-sales__body">
-            <span className="bold-sales__body__amount">$1'560.000</span>
-            <p className="bold-sales__body__period">Septiembre, 2020</p>
+            <span className="bold-sales__body__amount">{{ amount }}</span>
+            <p className="bold-sales__body__period">{{ namePeriod }}</p>
         </section>
     </div>
 </template>
