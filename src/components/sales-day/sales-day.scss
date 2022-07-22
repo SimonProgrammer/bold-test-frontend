@@ -101,7 +101,7 @@
 @include media-query(md){
     .bold-sales{
         width: max-content;
-        min-width: 16rem;
+        min-width: 17rem;
         &__header{
             font-size: 0.75rem;
             img{
@@ -122,7 +122,7 @@
 
 @include media-query(xl){
     .bold-sales{
-        min-width: 20rem;
+        min-width: 21rem;
         &__header{
             font-size: 1rem;
             img{
@@ -134,7 +134,7 @@
 
 @include media-query(xxl){
     .bold-sales{
-        min-width: 24rem;
+        min-width: 25rem;
         &__header{
             font-size: 1.2rem;
             padding: 1.2rem;
