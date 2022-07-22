@@ -26,7 +26,7 @@ export default defineComponent({
     currency(number: number){
       return currencyCOP(number);
     },
-    formatDateItem(date: string){
+    formatDateItem(date: Date){
       return formatDate(date);
     }
   }

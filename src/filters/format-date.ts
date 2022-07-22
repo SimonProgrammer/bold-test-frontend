@@ -1,4 +1,4 @@
-function formatDate(date: string){
+function formatDate(date: Date){
     console.log(date);
     return new Intl.DateTimeFormat("es-ES", {
         dateStyle: "medium",
