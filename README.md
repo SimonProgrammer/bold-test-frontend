@@ -24,9 +24,9 @@ You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/
 5. For development environment execute ``npm run dev``
 6. For production environment execute ``npm run build``
 
-## Missing unit tests 
+## Missing end to end tests 
 
-The unit test can create with cypress for evaluate flows of this app web:
+The end to end test can create with cypress for evaluate flows of this app web:
 
 1. Change period filter
 2. Change payment type
