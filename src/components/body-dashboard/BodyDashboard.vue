@@ -2,7 +2,10 @@
 <template>
     <section className="bold-body">
         <div className="bold-body__filter">
-            <sales-day :items="items" :namePeriod="namePeriod" />
+            <sales-day 
+                :items="items" 
+                :namePeriod="namePeriod"
+                :titlePeriod="titlePeriod" />
             <filter-data />
         </div>
         <list-data />

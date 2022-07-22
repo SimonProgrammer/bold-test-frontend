@@ -2,7 +2,9 @@
 <template>
     <div className="bold-sales">
         <header className="bold-sales__header">
-            <span>{{ t('filter_text_header_all_sales') }}</span>
+            <span>{{ t('filter_text_header_all_sales', {
+                titlePeriod
+            }) }}</span>
             <img src="/icons/information_icon.png" alt="information icon" />
         </header>
         <section className="bold-sales__body">

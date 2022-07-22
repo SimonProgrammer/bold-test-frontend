@@ -33,6 +33,14 @@ export default defineComponent({
                 (timeFilter === 'week') ? this.t('common_text_week') :
                 `${month} ${new Date().getFullYear()}`).toLowerCase();
       return nameP.charAt(0).toUpperCase() + nameP.slice(1);
+    },
+    titlePeriod(){
+      const { store: { time: timeFilter } } = this;
+      let month = new Date().toLocaleString('es-ES', { month: 'long' });
+      return (timeFilter === 'today' ? 
+                this.t('common_text_today') :
+                (timeFilter === 'week') ? this.t('common_text_week') :
+                `${month}`).toLowerCase();
     }
   }
 })

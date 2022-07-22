@@ -13,6 +13,10 @@ export default defineComponent({
     namePeriod: {
       type: String,
       default: ''
+    },
+    titlePeriod: {
+      type: String,
+      default: ''
     }
   },
   setup(){
