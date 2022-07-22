@@ -23,3 +23,12 @@ You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/
 4. Execute this command for install dependencies ``npm i``
 5. For development environment execute ``npm run dev``
 6. For production environment execute ``npm run build``
+
+## Missing unit tests 
+
+The unit test can create with cypress for evaluate flows of this app web:
+
+1. Change period filter
+2. Change payment type
+3. Display for mobile
+4. Display for desktop
